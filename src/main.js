@@ -1,7 +1,8 @@
 const a = 3;
-let b = 2;
-const c = 'adaasdasdadadasdasdadsadasdsadasdsadsadsadsadsadasdasdsadasdadsadadasdadasdadasasadss';
+const b = 2;
 
 function sum() {
-
+  return a + b;
 }
+
+sum();
