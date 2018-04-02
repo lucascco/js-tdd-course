@@ -1,15 +1,16 @@
-let txt = 'Brasil';
-let iteratorIxt = txt[Symbol.iterator]();
+let foo = Symbol('name');
+let bar = Symbol('name');
 
-// console.log(iteratorIxt.next());
-// console.log(iteratorIxt.next());
-// console.log(iteratorIxt.next());
-// console.log(iteratorIxt.next());
-// console.log(iteratorIxt.next());
-// console.log(iteratorIxt.next());
-// console.log(iteratorIxt.next());
+console.log(foo);
+console.log(bar);
 
-for(letters of txt) {
-    console.log(letters);
-    if(letters === 'a') break;
+console.log(bar == foo);
+
+let obj = {
+    [Symbol('name')]: 'Lucas',
+    [Symbol('age')]: 27,
+    city: 'Belo Horizonte'
 }
+const symbols = Object.getOwnPropertySymbols(obj);
+let data = symbols.map(sym => obj[sym]);
+console.log(obj, data);
