@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
 
-describe.only('MochaHooks', function() {
+describe.skip('MochaHooks', function() {
     let arr;
 
     beforeEach(function() {
