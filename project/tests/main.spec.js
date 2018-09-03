@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import {sum, divide, mult, sub} from '../src/main.js';
 
-describe.skip('Calc', () => {
+describe('Calc', () => {
   describe('Smoke tests', () => {
     
     it('should exist the method sum', () => {
