@@ -1,68 +1,64 @@
 import { expect } from 'chai';
-import calc from '../src/main.js';
+import {sum, divide, mult, sub} from '../src/main.js';
 
-describe.only('Calc', function() {
-  describe('Smoke tests', function() {
+describe.only('Calc', () => {
+  describe('Smoke tests', () => {
     
-    it('should exist the calc lib', function() {
-      expect(calc).to.exist;
-    });
-    
-    it('should exist the method sum', function() {
-      expect(calc.sum).to.exist;
-      expect(calc.sum).to.be.a('function');
+    it('should exist the method sum', () => {
+      expect(sum).to.exist;
+      expect(sum).to.be.a('function');
     });
 
-    it('should exist the method sub', function() {
-      expect(calc.sub).to.exist;
-      expect(calc.sub).to.be.a('function');
+    it('should exist the method sub', () => {
+      expect(sub).to.exist;
+      expect(sub).to.be.a('function');
     });
 
-    it('should exist the method mult', function() {
-      expect(calc.mult).to.exist;
-      expect(calc.mult).to.be.a('function');
+    it('should exist the method mult', () => {
+      expect(mult).to.exist;
+      expect(mult).to.be.a('function');
     });
 
-    it('should exist the method divide', function() {
-      expect(calc.divide).to.exist;
-      expect(calc.divide).to.be.a('function');
+    it('should exist the method divide', () => {
+      expect(divide).to.exist;
+      expect(divide).to.be.a('function');
     });
 
   });
   
-  describe('Sum', function() {
-    it('Should return 4 when `sum(2,2)`', function() {
-      expect(calc.sum(2,2)).to.be.equal(4);
+  describe('Sum', () => {
+    it('Should return 4 when `sum(2,2)`', () => {
+      expect(sum(2,2)).to.be.equal(4);
     });
   });
 
   
-  describe('Sub', function() {
+  describe('Sub', () => {
     
-    it('Should return 4 when `sub(6,2)`', function() {
-      expect(calc.sub(6,2)).to.be.equal(4);
+    it('Should return 4 when `sub(6,2)`', () => {
+      expect(sub(6,2)).to.be.equal(4);
     });
 
-    it('Should return -4 when `sub(6, 10)`', function() {
-      expect(calc.sub(6,10)).to.be.equal(-4);
+    it('Should return -4 when `sub(6, 10)`', () => {
+      expect(sub(6,10)).to.be.equal(-4);
     });
   });
 
     
-  describe('Mult', function() {
-    it('Should return 4 when `mult(2,2)`', function() {
-      expect(calc.mult(2,2)).to.be.equal(4);
+  describe('Mult', () => {
+    it('Should return 4 when `mult(2,2)`', () => {
+      expect(mult(2,2)).to.be.equal(4);
     });
   });
 
-  describe('Div', function() {
+  describe('Div', () => {
     
-    it('Should return 2 when `divide(4,2)`', function() {
-      expect(calc.divide(4,2)).to.be.equal(2);
+    it('Should return 2 when `divide(4,2)`', () => {
+      expect(divide(4,2)).to.be.equal(2);
     });
 
-    it('Should return `Não pode ter divisão por zero` when dived by zero', function() {
-      expect(calc.divide(4,0)).to.be.equal('Não pode ter divisão por zero')
+    it('Should return `Não pode ter divisão por zero` when dived by zero', () => {
+      expect(divide(4,0)).to.be.equal('Não pode ter divisão por zero')
     });
 
   });
