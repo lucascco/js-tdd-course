@@ -23,9 +23,9 @@ describe.only('Calc', function() {
       expect(calc.mult).to.be.a('function');
     });
 
-    it('should exist the method div', function() {
-      expect(calc.div).to.exist;
-      expect(calc.div).to.be.a('function');
+    it('should exist the method divide', function() {
+      expect(calc.divide).to.exist;
+      expect(calc.divide).to.be.a('function');
     });
 
   });
@@ -57,12 +57,12 @@ describe.only('Calc', function() {
 
   describe('Div', function() {
     
-    it('Should return 2 when `div(4,2)`', function() {
-      expect(calc.div(4,2)).to.be.equal(2);
+    it('Should return 2 when `divide(4,2)`', function() {
+      expect(calc.divide(4,2)).to.be.equal(2);
     });
 
     it('Should return `Não pode ter divisão por zero` when dived by zero', function() {
-      expect(calc.div(4,0)).to.be.equal('Não pode ter divisão por zero')
+      expect(calc.divide(4,0)).to.be.equal('Não pode ter divisão por zero')
     });
 
   });
