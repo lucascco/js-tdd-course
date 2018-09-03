@@ -12,13 +12,4 @@ const FizzBuzz = (num) => {
   return num;
 };
 
-function foo() {
-    return 'bla';
-}
-
-function foo2() {
-    return 'bla2';
-}
-
-
 export { sum, sub, mult, divide, FizzBuzz };
