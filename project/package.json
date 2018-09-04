@@ -1,7 +1,7 @@
 {
-  "name": "js-tdd-course",
+  "name": "spotify-wrapper",
   "version": "1.0.0",
-  "description": "Nossa biblioteca do curso de JS com TDD na prática",
+  "description": "A wrapper to work with the Spotify Web API.",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucascco/js-tdd-course.git"
+    "url": "git+https://github.com/lucascco/js-tdd-course/tree/spotify-wrapper"
   },
   "keywords": [
     "js",
