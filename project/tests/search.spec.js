@@ -1,14 +1,14 @@
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import { it, describe, context, beforeEach, afterEach } from 'mocha';
-import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from './../src/main';
+import { it, describe, beforeEach, afterEach } from 'mocha';
+import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from './../src/search';
 
 chai.use(sinonChai);
 
 global.fetch = require('node-fetch');
 
-describe('Spotify Wrapper', () => {
+describe('Search', () => {
   let fetchedStub;
 
   beforeEach(() => {

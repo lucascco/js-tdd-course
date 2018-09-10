@@ -2,7 +2,7 @@
   "name": "spotify-wrapper",
   "version": "1.0.0",
   "description": "A wrapper to work with the Spotify Web API.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint && npm run test:coverage",
@@ -44,6 +44,7 @@
   "homepage": "https://github.com/lucascco/js-tdd-course#readme",
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/register": "^7.0.0",
     "coffeescript": "^2.3.1",

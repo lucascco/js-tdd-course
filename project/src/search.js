@@ -1,9 +1,10 @@
+/*  global fetch */
 
-export const search = (query, type) => {
-  const url = `https://api.spotify.com/v1/search/q=${query}&type=${type}`;
-  return global.fetch(url)
-    .then(data => data.json());
-};
+import API_URL from './config';
+import toJson from './utils';
+
+export const search = (query, type) =>
+  fetch(`${API_URL}/search/q=${query}&type=${type}`).then(toJson);
 
 export const searchArtists = query =>
   search(query, 'artist');
