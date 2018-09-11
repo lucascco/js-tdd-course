@@ -12,7 +12,7 @@ import {
   getAlbumTracks,
 } from './album';
 
-module.exports = {
+export {
   searchAlbums,
   searchArtists,
   searchPlaylists,

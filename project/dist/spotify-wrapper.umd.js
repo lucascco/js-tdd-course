@@ -96,41 +96,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/webpack/buildin/harmony-module.js":
-/*!*******************************************!*\
-  !*** (webpack)/buildin/harmony-module.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(originalModule) {
-	if (!originalModule.webpackPolyfill) {
-		var module = Object.create(originalModule);
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		Object.defineProperty(module, "exports", {
-			enumerable: true
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
 /***/ "./src/album.js":
 /*!**********************!*\
   !*** ./src/album.js ***!
@@ -178,26 +143,32 @@ var API_URL = 'https://api.spotify.com/v1';
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
+/*! exports provided: searchAlbums, searchArtists, searchPlaylists, searchTracks, search, getAlbum, getAlbums, getAlbumTracks */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search */ "./src/search.js");
+/* harmony import */ var _search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search */ "./src/search.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "searchAlbums", function() { return _search__WEBPACK_IMPORTED_MODULE_0__["searchAlbums"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "searchArtists", function() { return _search__WEBPACK_IMPORTED_MODULE_0__["searchArtists"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "searchPlaylists", function() { return _search__WEBPACK_IMPORTED_MODULE_0__["searchPlaylists"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "searchTracks", function() { return _search__WEBPACK_IMPORTED_MODULE_0__["searchTracks"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "search", function() { return _search__WEBPACK_IMPORTED_MODULE_0__["search"]; });
+
 /* harmony import */ var _album__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./album */ "./src/album.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getAlbum", function() { return _album__WEBPACK_IMPORTED_MODULE_1__["getAlbum"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getAlbums", function() { return _album__WEBPACK_IMPORTED_MODULE_1__["getAlbums"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getAlbumTracks", function() { return _album__WEBPACK_IMPORTED_MODULE_1__["getAlbumTracks"]; });
 
 
-module.exports = {
-  searchAlbums: _search__WEBPACK_IMPORTED_MODULE_0__["searchAlbums"],
-  searchArtists: _search__WEBPACK_IMPORTED_MODULE_0__["searchArtists"],
-  searchPlaylists: _search__WEBPACK_IMPORTED_MODULE_0__["searchPlaylists"],
-  searchTracks: _search__WEBPACK_IMPORTED_MODULE_0__["searchTracks"],
-  search: _search__WEBPACK_IMPORTED_MODULE_0__["search"],
-  getAlbum: _album__WEBPACK_IMPORTED_MODULE_1__["getAlbum"],
-  getAlbums: _album__WEBPACK_IMPORTED_MODULE_1__["getAlbums"],
-  getAlbumTracks: _album__WEBPACK_IMPORTED_MODULE_1__["getAlbumTracks"]
-};
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+
 
 /***/ }),
 
