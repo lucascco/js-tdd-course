@@ -1,7 +1,10 @@
 global.fetch = require('node-fetch');
 
-import { searchAlbums } from '../src/search'
+import SpotifyWrapper from './../src/index';
 
-const albums = searchAlbums('Incubus');
+let spotify = new SpotifyWrapper({
+  token: 'Your token spotify here',
+});
+const albums = spotify.search.albums('Incubus');;
 
 albums.then(data => console.log(data));

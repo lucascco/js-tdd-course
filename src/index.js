@@ -1,14 +1,9 @@
-import {
-  searchAlbums,
-  searchArtists,
-  searchPlaylists,
-  searchTracks,
-  search,
-} from './search';
+/*  global fetch */
 
 import album from './album';
+import search from './search';
 
-import { API_URL } from './config';
+import API_URL from './config';
 import toJson from './utils';
 
 export default class SpotifyWrapper {
@@ -17,9 +12,10 @@ export default class SpotifyWrapper {
     this.token = options.token || 'no_token';
 
     this.album = album.bind(this)();
+    this.search = search.bind(this)();
   }
 
-  request(url){
+  request(url) {
     const headers = {
       headers: {
         Authorization: `'Bearer ${this.token}'`,
