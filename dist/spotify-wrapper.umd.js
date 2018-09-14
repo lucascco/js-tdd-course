@@ -136,7 +136,7 @@ var getAlbums = function getAlbums(idsAlbum) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HEADERS", function() { return HEADERS; });
-var TOKEN_API = 'BQDLyEoT9jhGUg_3h6A39KuIiUg5ytfHvoMrhLysWukoYAFAt_Wa-bDKod65CzNeC52AZPlS7julHPDwxOFzXE9CfDzuPTEbjXpoH5EiBWr2I5zhkZ0d4s7JGPsxdbaO5ffvYxlDHcLBKxsXzvpT';
+var TOKEN_API = 'BQC4XTd83m3czHkynwGBeglb7SQTMRMXQBVKGuxQwbOsHqOWwblaBoX326w9ssighO_rWjfWk-eRRVA5tmEbmkV1AhM7fyMG8Xx4p10DHrnaeyD8mVtBrc79GMBAmw99Ihw2y10haK4YagzC_wMq';
 var API_URL = 'https://api.spotify.com/v1';
 var HEADERS = {
   headers: {
@@ -199,7 +199,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var search = function search(query, type) {
-  return fetch("".concat(_config__WEBPACK_IMPORTED_MODULE_0__["API_URL"], "/search/q=").concat(query, "&type=").concat(type), _config__WEBPACK_IMPORTED_MODULE_0__["HEADERS"]).then(_utils__WEBPACK_IMPORTED_MODULE_1__["default"]);
+  return fetch("".concat(_config__WEBPACK_IMPORTED_MODULE_0__["API_URL"], "/search?q=").concat(query, "&type=").concat(type), _config__WEBPACK_IMPORTED_MODULE_0__["HEADERS"]).then(_utils__WEBPACK_IMPORTED_MODULE_1__["default"]);
 };
 var searchArtists = function searchArtists(query) {
   return search(query, 'artist');

@@ -3,6 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Spotify Wrapper Test</title>
+    <script src="./../dist/spotify-wrapper.umd.js"></script>
   </head>
-  <script src="./../dist/spotify-wrapper.umd.js"></script>
+  <body>
+    <div class="albums">
+      <img src="https://i.scdn.co/image/21f9a1e66901be7953b6b1e2410dcf46746ef065" alt="">
+    </div>
+
+    <script>
+      let divAlbums = document.getElementsByClassName('albums');
+      spotifyWrapper.searchAlbums('Incubus')
+        .then(function(res) {
+          let albums = res.albums;
+          divAlbums[0].innerHTML = albums.items.map(function(itemAlbum) {
+            let imageAlbum = itemAlbum.images[0].url;
+            return `<img src="${imageAlbum}" alt="${itemAlbum.name}"/>`
+          })
+        });
+    </script>
+  </body>
 </html>
