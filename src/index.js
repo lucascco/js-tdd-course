@@ -6,19 +6,25 @@ import {
   search,
 } from './search';
 
-import {
-  getAlbum,
-  getAlbums,
-  getAlbumTracks,
-} from './album';
+import album from './album';
 
-export {
-  searchAlbums,
-  searchArtists,
-  searchPlaylists,
-  searchTracks,
-  search,
-  getAlbum,
-  getAlbums,
-  getAlbumTracks,
-};
+import { API_URL } from './config';
+import toJson from './utils';
+
+export default class SpotifyWrapper {
+  constructor(options = {}) {
+    this.apiURL = options.apiURL || API_URL;
+    this.token = options.token || 'no_token';
+
+    this.album = album.bind(this)();
+  }
+
+  request(url){
+    const headers = {
+      headers: {
+        Authorization: `'Bearer ${this.token}'`,
+      },
+    };
+    return fetch(url, headers).then(toJson);
+  }
+}
