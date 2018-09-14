@@ -12,7 +12,10 @@
 
     <script>
       let divAlbums = document.getElementsByClassName('albums');
-      spotifyWrapper.searchAlbums('Incubus')
+      let spotify = new spotifyWrapper({
+        token: 'BQBH-YYYw3muGHm3lFNkQgClFDZo0R2WsGPeMiugYWCFyws_kNZppJ3srHjU9PCfMH4fZzGven5Uv_R0_SCX738Qr5SAJXpPA1j7oA5m8a56CaovZB_OeHElayarM__99uLmQbFpakPPyIZnxemo'
+      });
+      spotify.search.albums('Incubus')
         .then(function(res) {
           let albums = res.albums;
           divAlbums[0].innerHTML = albums.items.map(function(itemAlbum) {

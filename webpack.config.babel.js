@@ -3,7 +3,7 @@ import {join} from 'path'
  const include = join(__dirname, 'src')
 
  export default {
-  entry: './src/index',
+  entry: './index',
   mode: 'development',
   output: {
     path: join(__dirname, 'dist'),
